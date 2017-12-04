@@ -4310,8 +4310,8 @@ class nusoap_server extends nusoap_base {
 			$this->setError('Request not of type text/xml (no content-type header)');
 			return false;
     	}
-		if (!strstr($headers['content-type'], 'text/xml')) {
-			$this->setError('Request not of type text/xml');
+		if (!strstr($headers['content-type'], 'application/xml')) {
+			$this->setError('Request not of type application/xml');
 			return false;
 		}
 		if (strpos($headers['content-type'], '=')) {
